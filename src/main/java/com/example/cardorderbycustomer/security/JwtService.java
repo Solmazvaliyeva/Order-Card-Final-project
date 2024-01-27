@@ -1,4 +1,4 @@
-package com.example.cardapprovedbycustomer.springconfig;
+package com.example.cardorderbycustomer.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

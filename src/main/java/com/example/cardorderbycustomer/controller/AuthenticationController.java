@@ -1,12 +1,12 @@
-package com.example.cardapprovedbycustomer.controller;
+package com.example.cardorderbycustomer.controller;
 
-import com.example.cardapprovedbycustomer.auth.AuthenticationRequest;
-import com.example.cardapprovedbycustomer.auth.AuthenticationResponse;
-import com.example.cardapprovedbycustomer.auth.AuthenticationService;
-import com.example.cardapprovedbycustomer.auth.RegisterRequest;
+
+import com.example.cardorderbycustomer.auth.AuthenticationRequest;
+import com.example.cardorderbycustomer.auth.AuthenticationResponse;
+import com.example.cardorderbycustomer.auth.AuthenticationService;
+import com.example.cardorderbycustomer.auth.RegisterRequest;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
-import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;

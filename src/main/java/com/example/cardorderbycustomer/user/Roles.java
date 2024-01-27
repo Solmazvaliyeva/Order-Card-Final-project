@@ -1,4 +1,4 @@
-package com.example.cardapprovedbycustomer.user;
+package com.example.cardorderbycustomer.user;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

@@ -1,6 +1,6 @@
-package com.example.cardapprovedbycustomer.springconfig;
+package com.example.cardorderbycustomer.security;
 
-import com.example.cardapprovedbycustomer.user.UserRepository;
+import com.example.cardorderbycustomer.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

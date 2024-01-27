@@ -1,4 +1,4 @@
-package com.example.cardapprovedbycustomer.user;
+package com.example.cardorderbycustomer.user;
 
 public enum Role {
     ADMIN ,USER

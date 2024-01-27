@@ -1,10 +1,10 @@
-package com.example.customerregistration.auth;
+package com.example.cardorderbycustomer.auth;
 
 
-import com.example.customerregistration.securityconfig.JwtService;
-import com.example.customerregistration.user.Role;
-import com.example.customerregistration.user.User;
-import com.example.customerregistration.user.UserRepository;
+import com.example.cardorderbycustomer.security.JwtService;
+import com.example.cardorderbycustomer.user.Role;
+import com.example.cardorderbycustomer.user.User;
+import com.example.cardorderbycustomer.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -22,7 +22,12 @@ public class AuthenticationService {
 
     private final AuthenticationManager authenticationManager;
 
+
+
+
     public AuthenticationResponse register(RegisterRequest request){
+
+
         var user=  User.builder()
                 .firstName(request.getFirstName())
                 .lastName(request.getLastName())
@@ -44,12 +49,11 @@ public class AuthenticationService {
         UsernamePasswordAuthenticationToken token=
                 new UsernamePasswordAuthenticationToken(request.getEmail() ,request.getPassword());
         System.out.println("token " + token);
-//        var entity = authenticationManager.authenticate(
-//                token);
-//        System.out.println("userauth +" +entity.isAuthenticated() );
+
         var user = repository.findByEmail(request.getEmail()).orElseThrow();
         System.out.println("user +" + user);
         var jwtToken = jwtService.generateToken(user);
+
         return AuthenticationResponse.builder()
                 .token(jwtToken)
                 .build();

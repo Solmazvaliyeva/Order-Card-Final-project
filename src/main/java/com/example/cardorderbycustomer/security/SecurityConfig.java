@@ -1,4 +1,4 @@
-package com.example.cardapprovedbycustomer.springconfig;
+package com.example.cardorderbycustomer.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
@@ -28,7 +28,7 @@ public class SecurityConfig   {
                 .requestMatchers("/api/v1/auth/register").permitAll()
 
                 .requestMatchers("/api/v1/auth/authenticate").authenticated()
-                .requestMatchers("/create-card-api/**").authenticated()
+
 
 
                 .requestMatchers("/swagger-ui/**").permitAll()
@@ -36,6 +36,8 @@ public class SecurityConfig   {
                 .requestMatchers( "/swagger-resources/**").permitAll()
                 .requestMatchers("/swagger-ui.html").permitAll()
                 .requestMatchers("/v3/api-docs/**").permitAll()
+                .requestMatchers("/card-order-api/nofeign/**").authenticated()
+                .requestMatchers("/card-order-api/feign/**").permitAll()
 
 //                .and()
 //                .formLogin()
@@ -48,7 +50,8 @@ public class SecurityConfig   {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authenticationProvider(authenticationProvider)
-                .addFilterBefore(authenticationFilter , UsernamePasswordAuthenticationFilter.class);
+                .addFilterBefore(authenticationFilter , UsernamePasswordAuthenticationFilter.class)
+               ;
 
 
         return http.build();

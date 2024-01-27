@@ -1,4 +1,4 @@
-package com.example.cardorderbycustomer.exception;
+package com.example.cardorderbycustomer.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

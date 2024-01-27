@@ -1,4 +1,4 @@
-package com.example.customerregistration.auth;
+package com.example.cardorderbycustomer.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

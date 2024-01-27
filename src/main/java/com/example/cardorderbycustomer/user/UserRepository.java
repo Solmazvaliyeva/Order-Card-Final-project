@@ -1,4 +1,4 @@
-package com.example.cardapprovedbycustomer.user;
+package com.example.cardorderbycustomer.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
